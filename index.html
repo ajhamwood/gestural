@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Gesture recording/analysis</title>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="data:;base64,=">
+    <script src="vendor/vectorious-4.3.0.js"></script>
+    <script src="lib/gestural.js"></script>
+    <style>
+    html, body {
+      background: black;
+      color: lawngreen;
+      margin: 0;
+      height: 100%;
+      word-wrap: break-word
+    }
+    #accel, #orient, #data {
+      margin: 10px
+    }
+    .active {
+      background: white;
+      color: black
+    }
+    .hide {
+      display: none
+    }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>Accelerometer: </span><span id="accel" class="hide"></span>
+    </div>
+    <div>
+      <span>Orientation: </span><span id="orient" class="hide"></span>
+    </div>
+    <div>
+      <span>Data: </span><span id="data"></span>
+    </div>
+  </body>
+</html>
