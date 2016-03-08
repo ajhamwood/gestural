@@ -4,18 +4,25 @@
     <title>Gesture recording/analysis</title>
     <meta charset="utf-8"/>
     <link rel="icon" href="data:;base64,=">
-    <script src="vendor/vectorious-4.3.0.js"></script>
-    <script src="lib/gestural.js"></script>
     <style>
     html, body {
       background: black;
       color: lawngreen;
       margin: 0;
       height: 100%;
+      position: relative
+    }
+    #accel, #orient, #debug {
+      margin: 10px;
+      line-height: 1.5rem;
+      position: absolute;
       word-wrap: break-word
     }
-    #accel, #orient, #data {
-      margin: 10px
+    #orient {
+      top: calc(1.5rem + 10px)
+    }
+    #debug {
+      top: calc(3rem + 20px)
     }
     .active {
       background: white;
@@ -24,17 +31,24 @@
     .hide {
       display: none
     }
+    #container {
+      height: 100%;
+      overflow: hidden
+    }
     </style>
   </head>
   <body>
-    <div>
-      <span>Accelerometer: </span><span id="accel" class="hide"></span>
+    <div id="accel">
+      <span>Accelerometer: </span><span id="acceldata" class="hide"></span>
     </div>
-    <div>
-      <span>Orientation: </span><span id="orient" class="hide"></span>
+    <div id="orient">
+      <span>Orientation: </span><span id="orientdata" class="hide"></span>
     </div>
-    <div>
-      <span>Data: </span><span id="data"></span>
+    <div id="debug">
+      <span>Debug message: </span><span id="debugdata"></span>
     </div>
+    <div id="container"></div>
+    <script src="vendor/three-r74.js"></script>
+    <script src="lib/gestural.js"></script>
   </body>
 </html>
