@@ -12,7 +12,7 @@
       height: 100%;
       position: relative
     }
-    #accel, #orient, #debug {
+    #accel, #orient, #debug, #export {
       margin: 10px;
       line-height: 1.5rem;
       position: absolute;
@@ -23,6 +23,9 @@
     }
     #debug {
       top: calc(3rem + 20px)
+    }
+    #export {
+      top: calc(4.5rem + 30px)
     }
     .active {
       background: white;
@@ -47,8 +50,12 @@
     <div id="debug">
       <span>Debug message: </span><span id="debugdata"></span>
     </div>
+    <div id="export">
+      <button id="exportbutton">Export</span>
+    </div>
     <div id="container"></div>
     <script src="vendor/three-r74.js"></script>
+    <script src="vendor/filesaver.min.js"></script>
     <script src="lib/gestural.js"></script>
   </body>
 </html>
